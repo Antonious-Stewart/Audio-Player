@@ -21,8 +21,8 @@ body{
   background: #0F2027;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom right, var(--primary-color), var(--secondary-color),var(--tertiary-color)); 
   background: linear-gradient(to bottom right,var(--tertiary-color), var(--secondary-color),var(--primary-color));
-  height:50rem;
-  width:80rem;
+  height:100vh;
+  width:100vw;
   border-radius: 8px;
   backface-visibility: hidden;
   position: relative;
@@ -71,21 +71,20 @@ body{
   color:var(--light-primary-color);
 }
 .seekbar{
-  width: 55rem;
+  width: calc(70vw - 10rem);
   height: .5rem;
   background: gray;
   float:right;
   position: relative;
   margin-top: 2.2rem;
-  margin-left:auto;
-  margin-right: auto;
+  margin-right: calc(5vw - 2rem);
   border-radius: 2rem;
 }
 .playing{
   position: absolute;
   top:5%;
-  left:60%;
-  transform: translateX(-60%);
+  left:calc(60% - 6rem);
+  
   color:white;
   font-size: 1.2rem;
 }
@@ -140,6 +139,7 @@ body{
 .track:hover{
   font-size: 1.3rem;
 }
+/* animation for nowplaying */
 @keyframes playing{
   0%{
     filter: hue-rotate(0deg);
@@ -150,4 +150,39 @@ body{
   100%{
     filter: hue-rotate(0deg);
   }
+}
+/* media queries */
+@media(max-width:586px){
+
+}
+@media(max-width:498px){
+  #mediaControls{
+    position: absolute;
+    bottom:0;
+    left: 0;
+  }
+  .btn{
+    padding:1rem;
+    font-size: 1rem
+  }
+  .playing{
+    font-size: 1.1rem;
+  }
+  .loop,
+  .shuffle{
+    font-size: 1.2rem;
+    margin-left: .2rem;
+  }
+  .shuffle{
+    margin-right:3rem;
+  }
+  .seekbar{
+    margin-right: calc(5vw - 2rem);
+  }
+}
+@media(max-width:438px){
+  .playing{
+    left:calc(50% - 2rem);
+  }
+  
 }
