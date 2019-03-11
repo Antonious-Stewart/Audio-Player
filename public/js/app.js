@@ -7,59 +7,59 @@ const tracks = [
     length:song.duration / 60,
     artist:"Khalid",
     year:2019,
-    file:'../../audio/Khalid - Talk (Lyrics).mp3'
+    file:'/audio/Khalid - Talk (Lyrics).mp3'
   },
   {
     name:'Middle Child',
     length:song.duration / 60,
     artist:"J.Cole",
     year:2019,
-    file:"../../audio/J. Cole - Middle Child (Clean).mp3"
+    file:"/audio/J. Cole - Middle Child (Clean).mp3"
   },
   {
     name:'Wow',
     length:song.duration / 60,
     artist:"Post Malone",
     year:2019,
-    file:"../../audio/Post Malone - Wow. [Clean Version] - Clean Muzic.mp3"
+    file:"/audio/Post Malone - Wow. [Clean Version] - Clean Muzic.mp3"
   },
   {
     name:'Girls Like You ft. Cardi B',
     length:song.duration / 60 ,
     artist:"Maroon 5",
     year:2019,
-    file:"../../audio/Maroon 5 - Girls Like You (Clean - Lyrics) ft. Cardi B.mp3"
+    file:"/audio/Maroon 5 - Girls Like You (Clean - Lyrics) ft. Cardi B.mp3"
   },
   {
     name:'Goin\' Bad ft.Drake',
     length:song.currentTime / 60,
     artist:"Meek Mill",
     year:2019,
-    file:"../../audio/Meek Mil - Going Bad (Clean) ft. Drake.mp3"
+    file:"/audio/Meek Mil - Going Bad (Clean) ft. Drake.mp3"
   },{
     name:'Undecided',
     length:'0:00',
     artist:"Chris Brown",
     year:2019,
-    file:"../../audio/Chris Brown - Undecided (Official Lyrics).mp3"
+    file:"/audio/Chris Brown - Undecided (Official Lyrics).mp3"
   },{
     name:'Happier ft Bastille',
     length:'0:00',
     artist:"Marshmello",
     year:2019,
-    file:"../../audio/Marshmello ft. Bastille - Happier (Official Music Video).mp3"
+    file:"/audio/Marshmello ft. Bastille - Happier (Official Music Video).mp3"
   },{
     name:'Alot ft J.Cole',
     length:'0:00',
     artist:"21 Savage",
     year:2019,
-    file:"../../audio/21 Savage - a lot (Clean).mp3"
+    file:"/audio/21 Savage - a lot (Clean).mp3"
   },{
     name:'7 Years',
     length:'0:00',
     artist:"Lucas Graham",
     year:2019,
-    file:"../../audio/Lukas Graham -  7 Years [OFFICIAL MUSIC VIDEO].mp3"
+    file:"/audio/Lukas Graham -  7 Years [OFFICIAL MUSIC VIDEO].mp3"
   }
 ]
 
@@ -142,7 +142,6 @@ const playAndPause = ()=>{
     handle.style.left = `${position * 100}%`; //move handle
   })
 }
-playAndPause();
 // Play next song
 const next = ()=>{
   if(!random){

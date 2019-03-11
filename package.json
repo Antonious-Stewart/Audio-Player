@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.html"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Antonious-Stewart/Audio-Player/issues"
   },
-  "homepage": "https://github.com/Antonious-Stewart/Audio-Player#readme"
+  "homepage": "https://github.com/Antonious-Stewart/Audio-Player#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
