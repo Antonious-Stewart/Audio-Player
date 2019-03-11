@@ -7,7 +7,7 @@ const tracks = [
     length:song.duration / 60,
     artist:"Khalid",
     year:2019,
-    file:'../../audio/Khalid-Talk(Lyrics).mp3'
+    file:'../../audio/Khalid - Talk (Lyrics).mp3'
   },
   {
     name:'Middle Child',
@@ -81,7 +81,7 @@ let random; // shuffle flag
 // Play song
 const playSong = ()=>{
   if(!random){
-    song.src= tracks[currentSong].file;
+    song.src = tracks[currentSong].file;
     display.textContent=`${tracks[currentSong].name} - ${tracks[currentSong].artist}`;
     song.load();
     song.play();
@@ -110,6 +110,7 @@ window.onload = ()=>{
       addSong.classList.remove('playingTrack');
     }
     trackList.appendChild(addSong);
+    playSong();
   });
 }
 //UX for current track being played
