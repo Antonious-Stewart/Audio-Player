@@ -92,7 +92,7 @@ const playSong = ()=>{
     song.load();
     song.play();
   }
-  
+  nowPlaying();
 }
 // On song end play next track
 song.addEventListener('ended',()=>{
@@ -150,20 +150,20 @@ const next = ()=>{
     } else if(currentSong === tracks.length - 1 && repeat){
       currentSong = 0;
       song.load();
+      playAndPause();
       playSong();
-      nowPlaying();
     }else{
       currentSong++;
       song.load();
+      playAndPause();
       playSong();
-      nowPlaying();
     }
   } else{
     currentSong = rng();
     song.src = tracks[currentSong].file;
     song.load();
+    playAndPause();
     playSong();
-    nowPlaying();
   }
   
 }
@@ -176,20 +176,20 @@ const prev = () =>{
       currentSong = 9;
       currentSong--;
       song.load();
+      playAndPause();
       playSong();
-      nowPlaying();
     }else{
       currentSong--;
       song.load();
+      playAndPause();
       playSong();
-      nowPlaying();
     }
   } else{
     currentSong = rng();
     song.src = tracks[currentSong].file;
     song.load();
-    playSong();
-    nowPlaying();
+    playAndPause();
+      playSong();
   }
 }
 // generate random numbers between 0 and 9
@@ -212,3 +212,18 @@ loop.addEventListener('click',(evt)=>{
     repeat = false;
   }
 })
+window.addEventListener('keydown',(evt)=>{
+  if(evt.keyCode == 179){
+    playAndPause();
+  }
+  if(evt.keyCode == 176){
+    next();
+  }
+  if(evt.keyCode == 177){
+    prev();
+  }
+})
+// On song end play next track
+song.addEventListener('ended',()=>{
+  next();
+});
