@@ -181,8 +181,16 @@ body{
   }
 }
 @media(max-width:438px){
+  
   .playing{
-    left:calc(50% - 2rem);
+    left:17rem;
+    width:17.8rem;
+    overflow: hidden;
   }
   
+}
+@media(max-width:405px){
+  .mediaPlayer{
+    padding:.7rem;
+  }
 }
