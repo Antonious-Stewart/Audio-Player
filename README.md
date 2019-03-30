@@ -1,6 +1,7 @@
 # Audio-Player
----A HTML5 app created with HTML, CSS , Bootstrap and vanilla Javascript.
+---A HTML5 app created with HTML, CSS , Bootstrap and vanilla Javascript with a very minimal Node and Express backend.
 ---Users can use hotkeys to play song skip forward to the next song as well as go back to a previous song or use the audio controls.
+
 
 #Future Implementations
 ---Add new track button
